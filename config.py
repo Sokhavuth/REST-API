@@ -1,6 +1,6 @@
 #config.py
 import os
-#wee need to install python-dotenv
+#We need to install python-dotenv
 from dotenv import load_dotenv
 
 load_dotenv()
