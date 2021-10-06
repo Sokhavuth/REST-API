@@ -1,5 +1,4 @@
 <!--views/base.tpl-->
-
 <!DOCTYPE html>
 <html>
   <head>

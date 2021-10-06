@@ -1,9 +1,8 @@
 #index.py
 import sys
-from controllers.index import Index  
-    
+from routes import index
+
+app = index.app
+
 if sys.platform == 'win32':
-  app = Index()
-  app.run(host='localhost', port=7000, debug=True, reloader=True)
-else:
-  app = Index()
+    app.run(host='localhost', port=7000, debug=True, reloader=True)
