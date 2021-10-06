@@ -1,0 +1,121 @@
+.Book{
+    margin-top: 10px;
+    color: rgb(161, 3, 3)
+}
+
+.Book .main{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background: rgb(217, 247, 241);
+    color: rgb(70, 70, 70);
+    
+}
+
+.Book .main .sidebar{
+    padding: 20px;
+    background: rgb(148, 238, 220);
+}
+
+.Book .main .sidebar .book-title{
+    font: 20px/1.5 Oswald, Koulen;
+    margin-bottom: 30px;
+    color: green;
+}
+
+.Book .main .sidebar .chapter-wrapper{
+    max-height: 450px;
+    overflow: auto;
+}
+
+.Book .main .sidebar .chapter li{
+    list-style-position: inside;
+    list-style-type: upper-alpha;
+    font: 18px/1.5 Oswald, Bayon;
+    padding-top: 10px;
+} 
+
+
+.Book .main .sidebar .article li{
+    padding-left: 15px;
+    list-style-type: decimal;
+    font: italic 16px/1.75 StardosStencil, Limonf3;
+    list-style-position: inside;
+}
+
+.Book .main .sidebar .article li a{
+    color: rgb(70, 70, 70);
+}
+
+.Book .main .content{
+    padding: 20px;
+}
+
+.Book .main .content ul, .Book .main .content ol{
+    list-style-position: inside;
+}
+
+.Book .main .content .article-title{
+    font: 24px/1.5 StardosStencil, Limonf3;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 90% auto;
+    align-items: center;
+}
+
+.Book .main .content .article-title img{
+    width: 30px;
+}
+
+.Book .main .content .article-title .edit{
+    text-align: right;
+}
+
+.Book .main .content .article-body{
+    font: 14px/1.5 Courgette, HandWriting;
+    font-weight: 600;
+    color: rgb(114, 114, 114);
+}
+
+.Book .main .content .article-body a{
+    color: rgb(204, 0, 0);
+}
+
+.Book .main .content .article-body img{
+    max-width: 100%;
+}
+
+.Book .main .content pre code{
+    font: 14px/1.5  Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace, Nokora;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.hljs-ln-numbers {
+    text-align: center;
+    color: #ccc;
+    vertical-align: top;
+    padding-right: 5px;
+}
+
+.hljs-ln-n{
+    padding-right: 10px;
+}
+
+.hljs-ln-code {
+    padding-left: 1em;
+}
+
+@media only screen and (max-width: 600px){
+    .Book .main{
+        grid-template-columns: 100%;
+    }
+
+    .Book .main .content .article-title{
+        grid-template-columns: 100%;
+    }
+
+    .Book .main .content .article-title .edit{
+        text-align: left;
+        padding-top: 10px;
+    }
+}

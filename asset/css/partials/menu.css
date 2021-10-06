@@ -1,0 +1,87 @@
+
+.top-menu{
+  border-bottom: 5px solid lightgrey;
+}
+
+.top-menu .menu-wrpper{
+  display: grid;
+  grid-template-columns: 20% auto 10%;
+  align-items: center;
+}
+
+.top-menu .logo{
+  font: 35px/1.5 Lobster;
+}
+
+.top-menu .logo a{
+  color: white;
+}
+
+.top-menu .login{
+  text-align: right;
+}
+
+
+.top-menu, .top-menu .topnav{
+  background: rgb(104, 0, 0);
+}
+
+.top-menu .topnav {
+  overflow: hidden;
+}
+
+.top-menu .topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Oswald;
+}
+
+.top-menu .topnav a.active {
+  background-color: rgb(168, 0, 0);
+  color: white;
+}
+
+.top-menu .topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .top-menu .topnav a:not(:first-child) {display: none;}
+  .top-menu .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .top-menu .topnav.responsive {position: relative;}
+  .top-menu .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .top-menu .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .top-menu .menu-wrpper{
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+
+  .top-menu .login{
+    text-align: center;
+  }
+
+  .top-menu .topnav{
+    background: #940000;
+    margin: 10px 0;
+  }
+}

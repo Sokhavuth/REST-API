@@ -1,0 +1,50 @@
+/*static/styles/base_dashboard.css*/
+:root{
+  --background: lightgrey;
+  --background-dark: #317075;
+  --background-light: #71e4f4;
+  --yellow: #ffd343;
+  --body-font: 14px/1.75 Vidaloka, OdorMeanChey;
+  --link: rgb(0, 155, 155);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: var(--link);
+}
+a:hover{
+  opacity: .7;
+}
+.region{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body{
+  font: var(--body-font);
+  background: var(--background);
+}
+
+.main{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 20% auto;
+}
+
+.main .sidebar{
+  display: grid;
+  grid-template-columns: 25% auto;
+  align-items: center;
+  grid-gap: 10px;
+  font: 22px/1.5 Lobster;
+  max-height: 440px;
+}
+
+.main .sidebar img{
+  width: 100%;
+}

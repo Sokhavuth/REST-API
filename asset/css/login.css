@@ -1,0 +1,38 @@
+.login-form{
+  margin: 30px auto;
+  max-width: 400px;
+  background: var(--background-dark);
+}
+
+.login-form .title{
+  font: 18px/1.5 Oswald;
+  text-align: center;
+  padding: 5px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.login-form .wrapper{
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-gap: 5px 10px;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-form .wrapper a{
+  text-align: right;
+}
+
+.login-form .wrapper input{
+  padding: 5px;
+}
+
+@media only screen and (max-width: 600px){
+  .login-form .wrapper{
+    grid-template-columns: 100%;
+  }
+
+  .login-form .wrapper a{
+    text-align: left;
+  }
+}

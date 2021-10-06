@@ -1,0 +1,70 @@
+/* asset/css/book_dashboard.css */
+.Book{
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-gap: 20px;
+}
+
+.Book .ckeditor input{
+    width: 100%;
+    padding: 5px;
+    font: 16px/1.5 Oswald, Bayon;
+}
+
+.Book .ckeditor .ck-editor__editable{
+    min-height: 300px;
+}
+
+.Book .ckeditor .status{
+    font: var(--body-font);
+    padding: 0;
+    text-align: center;
+}
+
+.Book .form input, 
+.Book .form select,
+.Book .form textarea[name=categories]{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.Book .form textarea[name=categories]{
+    margin-bottom: 0;
+    min-height: 80px;
+}
+
+.Book .form input:last-child{
+    margin-bottom: 0;
+}
+
+.Book .ckeditor .viddata {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid grey;
+    border-width: 1px 2px 2px;
+    background-color: white;
+  }
+  
+.Book .ckeditor .viddata td, 
+.Book .ckeditor .viddata th {
+    border: 1px solid grey;
+    padding: 0 5px;
+    text-align: center;
+}
+  
+.Book .ckeditor .viddata th {
+    font-weight: normal;
+}
+
+.Book .ckeditor .viddata td{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Book .ckeditor .viddata .episode:hover{
+    opacity: .5;
+    cursor: pointer;
+}

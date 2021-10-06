@@ -1,0 +1,119 @@
+/*static/styles/base.css*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --grey: rgb(95, 95, 95);
+}
+
+a{
+  text-decoration: none;
+  color: var(--brown);
+}
+
+a:hover{
+  opacity: .7;
+}
+
+.region{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body{
+  font: 14px/1.5 Vidaloka, OdorMeanChey;
+  color: var(--grey);
+}
+
+.widget{
+  background: rgb(73, 0, 0);
+}
+
+.book-cover{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 25%  auto;
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.book-cover .book-wrapper{
+  /*background: #64a44c;*/
+  /*background: #1e1e44;*/
+  background: #1e1e44;
+  position: relative;
+  padding-top: 140%;
+}
+
+.book-cover .book-wrapper .book-python{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.book-cover .book-python .title{
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font: 20px/1.5 Anton, Koulen;
+  /*background: #3b6b4f;*/
+  /*background: #ffa500;*/
+  background: #ffa500;
+}
+
+.book-cover .book-python .info{
+  color: white;
+  /*color: black;*/
+  text-align: center;
+  margin-top: 10px;
+  font: 15px/1.75 HandWriting;
+}
+
+.book-cover .book-python .img-wrapper{
+  position: absolute;
+  /*bottom: 55px;*/
+  /*bottom: 80px;*/
+  bottom: 80px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.book-cover .book-python .img-wrapper img{
+  /*width: 45%;*/
+  /*width: 60%;*/
+  /*width: 55%;*/
+  width: 55%;
+}
+
+.book-cover .book-python .footer{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /*background: #1d1c1f;*/
+  /*background: #043c54;*/
+  background: #043c54;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+}
+
+.book-cover .ad{
+  position: relative;
+}
+
+.book-cover .ad .text{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 29%;
+  transform: translate(-47%,-50%);
+  font: 24px/1.5 StardosStencil, Limonf3;
+  color: #bd0411;
+}

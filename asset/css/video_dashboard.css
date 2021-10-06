@@ -1,0 +1,70 @@
+/* asset/css/video_dashboard.css */
+.video{
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-gap: 20px;
+}
+
+.video .ckeditor input{
+    width: 100%;
+    padding: 5px;
+    font: 16px/1.5 Oswald, Bayon;
+}
+
+.video .ckeditor .ck-editor__editable{
+    min-height: 300px;
+}
+
+.video .ckeditor .status{
+    font: var(--body-font);
+    padding: 0;
+    text-align: center;
+}
+
+.video .form input, 
+.video .form select,
+.video .form textarea[name=categories]{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.video .form textarea[name=categories]{
+    margin-bottom: 0;
+    min-height: 80px;
+}
+
+.video .form input:last-child{
+    margin-bottom: 0;
+}
+
+.video .ckeditor .viddata {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid grey;
+    border-width: 1px 2px 2px;
+    background-color: white;
+  }
+  
+.video .ckeditor .viddata td, 
+.video .ckeditor .viddata th {
+    border: 1px solid grey;
+    padding: 0 5px;
+    text-align: center;
+}
+  
+.video .ckeditor .viddata th {
+    font-weight: normal;
+}
+
+.video .ckeditor .viddata td{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.video .ckeditor .viddata .episode:hover{
+    opacity: .5;
+    cursor: pointer;
+}
