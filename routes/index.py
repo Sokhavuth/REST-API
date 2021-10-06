@@ -1,4 +1,6 @@
 #routes/index.py
+import config
+from copy import deepcopy
 from bottle import Bottle, template, static_file, request, response
 
 app = Bottle()
@@ -35,4 +37,5 @@ def loadFont(filename):
 
 @app.route('/')
 def index():
-    return template('index', data={'title': 'Khmer Web REST API'})
+    kdict = deepcopy(config.kdict)
+    return template('index', data=kdict)

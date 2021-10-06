@@ -8,3 +8,5 @@ kdict = {}
 
 kdict['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 kdict['DATABASE_URI'] = os.environ.get('DATABASE_URI')
+
+kdict['siteTitle'] = 'Khmer Web REST API'
