@@ -1,5 +1,5 @@
 #models/userdb/checkUserDB.py
-from . import setConnection
+import setConnection
 
 def call(email, password):
     cursor, connection = setConnection.call()

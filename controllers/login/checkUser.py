@@ -15,7 +15,7 @@ def call():
     if user:
         kdict["siteLogo"] = 'ទំព័រ​គ្រប់គ្រង'
         response.set_cookie('logged-in', user, path='/', secret=kdict['SECRET_KEY'])
-        return ('/dashboard')
+        return redirect('/dashboard')
     else:
         kdict['message'] = 'អ្នក​គ្មាន​ឈ្មោះ​ក្នុង​បញ្ជី​ទេ'
         return template('index', data=kdict)
