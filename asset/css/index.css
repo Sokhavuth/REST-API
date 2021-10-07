@@ -28,3 +28,7 @@ section form input{
     padding: 2px 5px;
     font: 14px/1.5 Vidaloka, OdorMeanChey;
 }
+
+section form div{
+    text-align: center;
+}

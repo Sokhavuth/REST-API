@@ -1,7 +1,8 @@
 #routes/index.py
 import config
 from copy import deepcopy
-from bottle import Bottle, template, static_file, request, response
+from bottle import Bottle, template, static_file, request, response, redirect
+from controllers.login import checkLogged
 
 app = Bottle()
 
