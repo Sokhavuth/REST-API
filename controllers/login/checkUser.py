@@ -1,6 +1,5 @@
 #controllers/login/checkUser.py
 import config
-from datetime import datetime 
 from copy import deepcopy
 from bottle import template, request, response, redirect
 from models.userdb import checkUserDB

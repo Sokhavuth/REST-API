@@ -1,4 +1,4 @@
-#models/userdb/setConnection.py
+#setConnection.py
 import sqlite3, config
 
 def call():

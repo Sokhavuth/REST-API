@@ -38,5 +38,8 @@ def loadFont(filename):
 
 @app.route('/')
 def index():
+    if checkLogged.call():
+        redirect('/dashboard')
+        
     kdict = deepcopy(config.kdict)
     return template('index', data=kdict)

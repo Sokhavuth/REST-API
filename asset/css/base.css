@@ -1,4 +1,19 @@
 /*asset/css/base.css*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.region{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 body{
     background: grey;
     font: 14px/1.5 Vidaloka, OdorMeanChey;
