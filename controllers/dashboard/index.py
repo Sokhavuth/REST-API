@@ -4,6 +4,6 @@ from copy import deepcopy
 
 def call():
     kdict = deepcopy(config.kdict)
-    kdict['siteLogo'] = 'ទំព័រ​គ្រប់គ្រង'
+    kdict['siteLogo'] = 'ទំព័រ​ការផ្សាយ'
 
     return template('dashboard/index.tpl', data=kdict)

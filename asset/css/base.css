@@ -19,7 +19,11 @@ a:hover{
     margin: 0 auto;
 }
 
+:root{
+    --body-font: 14px/1.5 Vidaloka, OdorMeanChey;
+}
+
 body{
     background: grey;
-    font: 14px/1.5 Vidaloka, OdorMeanChey;
+    font: var(--body-font);
 }
