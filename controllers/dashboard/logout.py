@@ -1,3 +1,4 @@
+#controllers/dashboard/logout.py
 import config
 from bottle import request, response, redirect
 

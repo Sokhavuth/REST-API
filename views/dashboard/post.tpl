@@ -1,0 +1,1 @@
+<!--views/dashboard/post.tpl-->

@@ -1,7 +1,7 @@
 <!--views/dashboard/index.tpl-->
 % rebase('base.tpl')
-<link href="/static/styles/partials/header.css" rel="stylesheet"></link>
 
+<link href="/static/styles/partials/header.css" rel="stylesheet"></link>
 <section class='Head'>
     <header class='region'>
         <div class='site-logo'>{{ data['siteLogo'] }}</div>
@@ -19,4 +19,10 @@
 
         <div class='logout'><a href='/dashboard/logout'>ចេញ​ក្រៅ</a></div>
     </header>
+</section>
+
+<link href="/static/styles/partials/body.css" rel="stylesheet"></link>
+<section class='Body region'>
+    %include('dashboard/menu.tpl')
+    %include('dashboard/post.tpl')
 </section>
