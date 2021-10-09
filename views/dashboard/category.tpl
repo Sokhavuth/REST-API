@@ -1,28 +1,11 @@
-<!--views/dashboard/category.tpl-->
-% rebase('base.tpl')
+<!--views/dashboard/category_content-->
+<link href='/static/styles/category.css' rel='stylesheet' />
 
-<link href="/static/styles/partials/header.css" rel="stylesheet"></link>
-<section class='Head'>
-    <header class='region'>
-        <div class='site-logo'>{{ data['siteLogo'] }}</div>
-
-        <form action='/dashboard/search' method='post'>
-            <select name="select">
-                <option>ការផ្សាយ</option>
-                <option>ជំពូក</option>
-                <option>សៀវភៅ</option>
-                <option>អ្នក​ប្រើប្រាស់</option>
-            </select>
-            <input type='text' name="q" placeholder="Search" required />
-            <input type="submit" value='បញ្ជូន'​ />
-        </form>
-
-        <div class='logout'><a href='/dashboard/logout'>ចេញ​ក្រៅ</a></div>
-    </header>
-</section>
-
-<link href="/static/styles/partials/body.css" rel="stylesheet"></link>
-<section class='Body region'>
-    %include('dashboard/menu.tpl')
-    %include('dashboard/category_content.tpl')
+<section class='Category'>
+    <form action='/dashboard/category' method='post'>
+        <a>ឈ្មោះ​ជំពូកៈ</a><input type='text' name="label" required />
+        <a>តំណរភ្ជាប់ៈ</a><input type='text' name='link' required />
+        <a>ពេល​បង្កើតៈ</a><input type='datetime-local' name='datetime' required />
+        <a></a><input type='submit' value='បញ្ជូន' />
+    </form>
 </section>

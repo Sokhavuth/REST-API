@@ -1,9 +1,9 @@
-/*asset/css/category_content.css*/
-.Content{
+/*asset/css/category.css*/
+.Category{
     background: lightgrey;
 }
 
-.Content form{
+.Category form{
     display: grid;
     grid-template-columns: 20% 50%;
     grid-gap: 5px;
@@ -11,12 +11,12 @@
     margin: 20px auto;
 }
 
-.Content form a{
+.Category form a{
     color: black;
     text-align: right;
 }
 
-.Content form input{
+.Category form input{
     font: var(--body-font);
     padding: 2px 5px;
 }

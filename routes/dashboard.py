@@ -24,8 +24,8 @@ def logout():
 
 @app.route('/category')
 def category():
-    #from controllers.dashboard import category
-    kdict = deepcopy(config.kdict)
-    kdict['siteLogo'] = 'ទំព័រ​ជំពូក'
-
-    return template('dashboard/category', data=kdict)
+    if checkLogged.call():
+        from controllers.dashboard import category
+        return category.call()
+    else:
+        redirect('/')

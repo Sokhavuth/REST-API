@@ -24,5 +24,12 @@
 <link href="/static/styles/partials/body.css" rel="stylesheet"></link>
 <section class='Body region'>
     %include('dashboard/menu.tpl')
-    %include('dashboard/post.tpl')
+
+    <%
+    if 'index' in data['route']:
+        include('dashboard/post.tpl')
+    elif 'category' in data['route']:
+        include('dashboard/category.tpl')
+    end
+    %>
 </section>
