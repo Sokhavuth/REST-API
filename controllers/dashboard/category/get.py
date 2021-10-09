@@ -1,4 +1,4 @@
-#controllers/dashboard/category.py
+#controllers/dashboard/get.py
 import config
 from bottle import template
 from copy import deepcopy

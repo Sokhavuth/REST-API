@@ -25,7 +25,15 @@ def logout():
 @app.route('/category')
 def category():
     if checkLogged.call():
-        from controllers.dashboard import category
-        return category.call()
+        from controllers.dashboard.category import get
+        return get.call()
+    else:
+        redirect('/')
+
+@app.route('/category', method='post')
+def category():
+    if checkLogged.call():
+        from controllers.dashboard.category import create
+        return create.call()
     else:
         redirect('/')
