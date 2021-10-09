@@ -21,3 +21,11 @@ def index():
 def logout():
     from controllers.dashboard import logout
     logout.call()
+
+@app.route('/category')
+def category():
+    #from controllers.dashboard import category
+    kdict = deepcopy(config.kdict)
+    kdict['siteLogo'] = 'ទំព័រ​ជំពូក'
+
+    return template('dashboard/category', data=kdict)
