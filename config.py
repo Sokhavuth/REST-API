@@ -12,3 +12,4 @@ kdict['DATABASE_URI'] = os.environ.get('DATABASE_URI')
 kdict['siteTitle'] = 'Khmer Web REST API'
 kdict['siteLogo'] = 'ទំព័រ​គ្រប់គ្រង'
 kdict['message'] = ''
+kdict['maxItemList'] = 10

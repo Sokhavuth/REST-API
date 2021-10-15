@@ -33,3 +33,34 @@
     end
     %>
 </section>
+
+<link href="/static/styles/partials/listing.css" rel="stylesheet"></link>
+<section class='Listing region'>
+    %if 'count' in data:
+        <div class='info'>Total amount of item: {{data['count']}}</div>
+    %else:
+        <div class='info'>Total amount of item:</div>
+    %end
+
+    <div class='items'>
+        %if 'items' in data:
+        %for item in data['items']:
+            <div class='item'>
+                <a href="/{{data['route']}}/{{item[3]}}"><img class='thumb' src="{{item[1]}}" /></a>
+
+                <div class='wrapper'>
+                    <a href="/{{data['route']}}/{{item[3]}}">{{item[0]}}</a>
+                    <p>{{item[2]}}</p>
+                </div>
+                
+                <div class='icon'>
+                    <a href='/dashboard/edit'><img src='/static/images/edit.png' /></a>
+                    <a href='/dashboard/delete'><img src='/static/images/delete.png' /></a>
+                </div>
+            </div>
+        %end
+        %end
+    </div>
+
+    <div class='load-more'><img src="/static/images/load-more.png" /></div>
+</section>
