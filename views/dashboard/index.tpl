@@ -50,7 +50,10 @@
 
                 <div class='wrapper'>
                     <a href="/{{data['route']}}/{{item[3]}}">{{item[0]}}</a>
-                    <p>{{item[2]}}</p>
+                    <p class='date'></p>
+                    <script>
+                        $('.items .item .date').html(new Date("{{item[2]}}").toLocaleDateString()) 
+                    </script>
                 </div>
                 
                 <div class='icon'>
