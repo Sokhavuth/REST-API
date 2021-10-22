@@ -31,3 +31,11 @@ def edit(id):
         return edit.call(id)
     else:
         redirect('/')
+
+@app.route('/delete/<id>')
+def delete(id):
+    if checkLogged.call():
+        from controllers.dashboard.category import delete
+        return delete.call(id)
+    else:
+        redirect('/')
