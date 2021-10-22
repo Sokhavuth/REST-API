@@ -7,8 +7,13 @@ def call():
     name = request.forms.getunicode('name')
     link = request.forms.getunicode('link')
     datetime = request.forms.getunicode('datetime')
-    id = uuid.uuid4().hex
+    edit = request.forms.getunicode('editid')
 
-    createdb.call(name, link, datetime, id)
+    if not edit:
+        id = uuid.uuid4().hex
+    else:
+        id = edit
+
+    createdb.call(name, link, datetime, id, edit)
 
     return redirect('/dashboard/category')

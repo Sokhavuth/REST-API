@@ -57,8 +57,8 @@
                 </div>
                 
                 <div class='icon'>
-                    <a href='/dashboard/edit'><img src='/static/images/edit.png' /></a>
-                    <a href='/dashboard/delete'><img src='/static/images/delete.png' /></a>
+                    <a href='/dashboard/{{data["route"]}}/edit/{{item[3]}}'><img src='/static/images/edit.png' /></a>
+                    <a href='/dashboard/{{data["route"]}}/delete/{{item[3]}}'><img src='/static/images/delete.png' /></a>
                 </div>
             </div>
         %end

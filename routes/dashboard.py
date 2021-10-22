@@ -31,9 +31,17 @@ def category():
         redirect('/')
 
 @app.route('/category', method='post')
-def category():
+def category_post():
     if checkLogged.call():
         from controllers.dashboard.category import create
         return create.call()
+    else:
+        redirect('/')
+
+@app.route('/category/edit/<id>')
+def category_edit(id):
+    if checkLogged.call():
+        from controllers.dashboard.category import edit
+        return edit.call(id)
     else:
         redirect('/')
