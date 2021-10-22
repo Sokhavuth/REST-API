@@ -1,7 +1,6 @@
 #routes/dashboard.py
 import config
-from copy import deepcopy
-from bottle import Bottle, redirect, template, request
+from bottle import Bottle, redirect
 from controllers.login import checkLogged
 
 import bottle
@@ -22,26 +21,5 @@ def logout():
     from controllers.dashboard import logout
     logout.call()
 
-@app.route('/category')
-def category():
-    if checkLogged.call():
-        from controllers.dashboard.category import get
-        return get.call()
-    else:
-        redirect('/')
-
-@app.route('/category', method='post')
-def category_post():
-    if checkLogged.call():
-        from controllers.dashboard.category import create
-        return create.call()
-    else:
-        redirect('/')
-
-@app.route('/category/edit/<id>')
-def category_edit(id):
-    if checkLogged.call():
-        from controllers.dashboard.category import edit
-        return edit.call(id)
-    else:
-        redirect('/')
+from routes import category
+app.mount('/category', category.app)
