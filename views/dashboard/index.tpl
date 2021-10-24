@@ -2,6 +2,7 @@
 % rebase('base.tpl')
 
 <link href="/static/styles/partials/header.css" rel="stylesheet"></link>
+<script src="/static/scripts/paginate.js"></script>
 <section class='Head'>
     <header class='region'>
         <div class='site-logo'>{{ data['siteLogo'] }}</div>
@@ -65,5 +66,9 @@
         %end
     </div>
 
-    <div class='load-more'><img src="/static/images/load-more.png" /></div>
+    <script>
+        var route = "{{data['route']}}"
+    </script>
+
+    <div class='load-more'><img onclick='paginate(route)' src="/static/images/load-more.png" /></div>
 </section>

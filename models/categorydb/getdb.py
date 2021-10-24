@@ -4,7 +4,7 @@ import setConnection
 def call(amount):
     cursor, connection = setConnection.call()
 
-    cursor.execute("SELECT * FROM category ORDER BY datetime(datetime) DESC LIMIT ?", (amount,))
+    cursor.execute("SELECT * FROM category ORDER BY datetime(datetime) DESC, rowid DESC LIMIT ?", (amount,))
     categories = cursor.fetchall()
 
     cursor.execute("SELECT COUNT(*) FROM category")
