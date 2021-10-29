@@ -1,5 +1,5 @@
 #controllers/dashboard/category/create.py
-import config, uuid
+import uuid
 from bottle import request, redirect
 from models.categorydb import createdb
 

@@ -23,3 +23,6 @@ def logout():
 
 from routes import category
 app.mount('/category', category.app)
+
+from routes import post
+app.mount('/post', post.app)

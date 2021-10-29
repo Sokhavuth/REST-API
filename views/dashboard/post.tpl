@@ -5,7 +5,7 @@
 
 <section class='Main'>
     <div class='content'>
-        <form action='/users/post' method='post' >
+        <form action='/dashboard/post' method='post' >
             <input type='text' name='title' placeholder='ចំណងជើង' required />
             <textarea name="content" id="editor" ></textarea>
             <div class='wrapper'>
@@ -15,7 +15,7 @@
                     %end
                 </select>
                 <input type='text' name='thumb' required placeholder="តំណរ​ភ្ជាប់​រូប​តំណាង" />
-                <input type='datetime-local' value='datetime' name='datetime' required />
+                <input type='datetime-local' value='' name='datetime' required />
                 <input type='submit' value='ចុះ​ផ្សាយ' />
             </div>
             <input name='entries' value='' type='hidden' />

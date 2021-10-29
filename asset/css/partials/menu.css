@@ -1,6 +1,9 @@
 /*asset/css/partials/menu.css*/
-.Menu{
+.Menu-wrapper{
     background: lightgrey;
+}
+.Menu{
+    max-height: 600px;
     padding: 20px;
     display: grid;
     grid-template-columns: 25% auto;

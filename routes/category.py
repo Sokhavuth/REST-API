@@ -1,5 +1,4 @@
 #routes/category.py
-import config
 from bottle import Bottle, redirect
 from controllers.login import checkLogged
 

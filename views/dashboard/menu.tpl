@@ -1,7 +1,8 @@
 <!--views/dashboard/menu.top-->
 <link href="/static/styles/partials/menu.css" rel="stylesheet"></link>
 
-<section class='Menu'>
+<section class='Menu-wrapper'>
+<div class='Menu'>
     <a href='/dashboard'><img src='/static/images/movie.png' /></a>
     <a href='/dashboard'>ការផ្សាយ</a>
 
@@ -19,4 +20,5 @@
 
     <a href='/dashboard/setting'><img src='/static/images/setting.png' /></a>
     <a href='/dashboard/setting'>Setting</a>
+</div>
 </section>
