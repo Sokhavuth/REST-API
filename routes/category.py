@@ -44,6 +44,6 @@ def delete(id):
 def paginate(page):
     if checkLogged.call():
         from controllers.dashboard.category import paginate
-        return paginate.call(page)
+        return paginate.call(int(page))
     else:
         redirect('/')
