@@ -1,6 +1,7 @@
 <!--views/dashboard/post.tpl-->
 <link rel='stylesheet' href='/static/styles/post.css' />
 <script src="/static/scripts/ckeditor/ckeditor.js"></script>
+<script src="/static/scripts/video.js"></script>
 
 <section class='Main'>
     <div class='content'>
@@ -9,7 +10,9 @@
             <textarea name="content" id="editor" ></textarea>
             <div class='wrapper'>
                 <select name='category' >
-                    <option>categories</option>
+                    %for category in data['categories']:
+                        <option>{{ category[0] }}</option>
+                    %end
                 </select>
                 <input type='text' name='thumb' required placeholder="តំណរ​ភ្ជាប់​រូប​តំណាង" />
                 <input type='datetime-local' value='datetime' name='datetime' required />

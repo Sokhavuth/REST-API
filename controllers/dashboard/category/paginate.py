@@ -1,4 +1,4 @@
-#controllers/dashboard/category/get.py
+#controllers/dashboard/category/paginate.py
 import config
 from bottle import request
 from copy import deepcopy
