@@ -1,4 +1,4 @@
-#models/categorydb/paginatedb.py
+#models/postdb/paginatedb.py
 import setConnection
 
 def call(page, amount):
