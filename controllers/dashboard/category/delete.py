@@ -1,5 +1,4 @@
 #controllers/dashboard/category/delete.py
-import config
 from bottle import template, redirect
 from models.categorydb import deletedb
 

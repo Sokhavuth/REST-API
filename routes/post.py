@@ -16,9 +16,17 @@ def index():
         redirect('/')
 
 @app.route('/edit/<id>')
-def index(id):
+def edit(id):
     if checkLogged.call():
         from controllers.dashboard.post import edit
         return edit.call(id)
+    else:
+        redirect('/')
+
+@app.route('/delete/<id>')
+def delete(id):
+    if checkLogged.call():
+        from controllers.dashboard.post import delete
+        return delete.call(id)
     else:
         redirect('/')
