@@ -38,9 +38,9 @@
 <link href="/static/styles/partials/listing.css" rel="stylesheet"></link>
 <section class='Listing region'>
     %if 'count' in data:
-        <div class='info'>Total amount of item: {{data['count']}}</div>
+        <div class='info'>សរុប​ទាំងអស់​​មាន​ចំនួនៈ {{data['count']}}</div>
     %else:
-        <div class='info'>Total amount of item:</div>
+        <div class='info'>សរុប​ទាំងអស់​​មាន​ចំនួនៈ</div>
     %end
 
     <div class='items'>
