@@ -12,6 +12,7 @@ const genJson = () => {
     }
         
     var success = false
+    
     for(let v in entries){
         if(entries[v] === ''){
             alert('You need to fill the required field '+v)

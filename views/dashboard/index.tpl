@@ -27,7 +27,7 @@
     %include('dashboard/menu.tpl')
 
     <%
-    if 'index' in data['route']:
+    if 'post' in data['route']:
         include('dashboard/post.tpl')
     elif 'category' in data['route']:
         include('dashboard/category.tpl')

@@ -14,3 +14,11 @@ def index():
         return create.call()
     else:
         redirect('/')
+
+@app.route('/edit/<id>')
+def index(id):
+    if checkLogged.call():
+        from controllers.dashboard.post import edit
+        return edit.call(id)
+    else:
+        redirect('/')
