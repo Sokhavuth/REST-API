@@ -3,6 +3,7 @@ import config
 from bottle import template
 from copy import deepcopy
 from models.categorydb import getdb
+from controllers.dashboard.post import get
 
 def call():
     kdict = deepcopy(config.kdict)
@@ -10,5 +11,8 @@ def call():
     kdict['route'] = 'index'
 
     kdict['categories'] = getdb.call('all')
+    posts, count = get.call()
+    kdict['items'] = posts
+    kdict['count'] = count
 
     return template('dashboard/index.tpl', data=kdict)
