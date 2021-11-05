@@ -1,7 +1,7 @@
 #controllers/dashboard/post/create.py
 import uuid
 from bottle import request, redirect
-from models.postdb import createdb
+from models.bookdb import createdb
 
 def call():
     title = request.forms.getunicode('title')

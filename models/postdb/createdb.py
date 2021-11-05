@@ -1,25 +1,24 @@
 #models/postdb/createdb.py
 import setConnection
 
-def call(title, thumb, datetime, id, edit, content, chapter, entries, bookTitle):
+def call(title, thumb, datetime, id, edit, content, category, entries):
     cursor, connection = setConnection.call()
 
     if not edit:
-        sql = "INSERT INTO book VALUES(?, ?, ?, ?, ?, ?, ?, ?)"
-        cursor.execute(sql, (title, thumb, datetime, id, content, chapter, entries, bookTitle))
+        sql = "INSERT INTO post VALUES(?, ?, ?, ?, ?, ?, ?)"
+        cursor.execute(sql, (title, thumb, datetime, id, content, category, entries))
     else:
-        sql = """UPDATE book SET
+        sql = """UPDATE post SET
             title = ?,
             thumb = ?,
             datetime = ?,
             content = ?,
             category = ?,
-            entries = ?,
-            bookTitle = ?
+            entries = ?
             
             WHERE id = ? """
 
-        cursor.execute(sql, (title, thumb, datetime, content, chapter, entries, bookTitle, id))
+        cursor.execute(sql, (title, thumb, datetime, content, category, entries, id))
 
     connection.commit()
     cursor.close()
