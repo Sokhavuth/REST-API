@@ -2,6 +2,13 @@
 <link rel='stylesheet' href='/static/styles/post.css' />
 <script src="/static/scripts/ckeditor/ckeditor.js"></script>
 <script src="/static/scripts/video.js"></script>
+<style>
+.Main .content form .wrapper{
+    margin-top:5px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% auto 15%;
+}
+</style>
 
 <section class='Main'>
     <div class='content'>
@@ -10,6 +17,7 @@
             <input type='text' name='title' value='{{data["item"][0]}}' placeholder='ចំណងជើង' required />
             <textarea name="content" id="editor" >{{data["item"][4]}}</textarea>
             <div class='wrapper'>
+                <input type='text' name='book_title' required placeholder="ឈ្មោះ​សៀវភៅ" />
                 <input type='text' name='chapter' required placeholder="ជំពូក" />
                 <input type='text' name='thumb' value='{{data["item"][1]}}' required placeholder="តំណរ​ភ្ជាប់​រូប​តំណាង" />
                 <input type='datetime-local' value='{{data["item"][2]}}' name='datetime' required />
@@ -21,6 +29,7 @@
             <input type='text' name='title' placeholder='ចំណងជើង' required />
             <textarea name="content" id="editor" ></textarea>
             <div class='wrapper'>
+                <input type='text' name='book_title' required placeholder="ឈ្មោះ​សៀវភៅ" />
                 <input type='text' name='chapter' required placeholder="ជំពូក" />
                 <input type='text' name='thumb' required placeholder="តំណរ​ភ្ជាប់​រូប​តំណាង" />
                 <input type='datetime-local' value='' name='datetime' required />
