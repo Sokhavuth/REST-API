@@ -20,6 +20,10 @@ def loadStyle(filename):
 def loadStylePartial(filename):
     return static_file(filename, root='./asset/css/partials')
 
+@app.route('/static/styles/highlight/styles/<filename>')
+def loadHighLightStylesScript(filename):
+    return static_file(filename, root='./asset/js/highlight/styles')
+
 
 @app.route('/static/scripts/<filename>')
 def loadScript(filename):

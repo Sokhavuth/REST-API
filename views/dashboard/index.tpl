@@ -31,6 +31,8 @@
         include('dashboard/post.tpl')
     elif 'category' in data['route']:
         include('dashboard/category.tpl')
+    elif 'book' in data['route']:
+        include('dashboard/book.tpl')
     end
     %>
 </section>

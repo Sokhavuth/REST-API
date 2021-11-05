@@ -26,3 +26,6 @@ app.mount('/category', category.app)
 
 from routes import post
 app.mount('/post', post.app)
+
+from routes import book
+app.mount('/book', book.app)
