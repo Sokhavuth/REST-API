@@ -14,3 +14,11 @@ def index():
         return get.call()
     else:
         redirect('/')
+
+@app.route('/', method='post')
+def create():
+    if checkLogged.call():
+        from controllers.dashboard.book import create
+        return create.call()
+    else:
+        redirect('/')

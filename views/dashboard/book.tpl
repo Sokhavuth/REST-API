@@ -12,12 +12,12 @@
 
 <section class='Main'>
     <div class='content'>
-        <form action='/dashboard/post' method='post' >
+        <form action='/dashboard/book' method='post' >
             %if 'edit' in data:
             <input type='text' name='title' value='{{data["item"][0]}}' placeholder='ចំណងជើង' required />
             <textarea name="content" id="editor" >{{data["item"][4]}}</textarea>
             <div class='wrapper'>
-                <input type='text' name='book_title' required placeholder="ឈ្មោះ​សៀវភៅ" />
+                <input type='text' name='book_title' value='{{data["item"][6]}}' required placeholder="ឈ្មោះ​សៀវភៅ" />
                 <input type='text' name='chapter' required placeholder="ជំពូក" />
                 <input type='text' name='thumb' value='{{data["item"][1]}}' required placeholder="តំណរ​ភ្ជាប់​រូប​តំណាង" />
                 <input type='datetime-local' value='{{data["item"][2]}}' name='datetime' required />

@@ -9,14 +9,15 @@ def call():
     datetime = request.forms.getunicode('datetime')
     edit = request.forms.getunicode('editid')
     content = request.forms.getunicode('content')
-    category = request.forms.getunicode('category')
+    chapter = request.forms.getunicode('chapter')
     entries = request.forms.getunicode('entries')
+    bookTitle = request.forms.getunicode('book_title')
 
     if not edit:
         id = uuid.uuid4().hex
     else:
         id = edit
 
-    createdb.call(title, thumb, datetime, id, edit, content, category, entries)
+    createdb.call(title, thumb, datetime, id, edit, content, chapter, entries, bookTitle)
 
-    return redirect('/dashboard')
+    return redirect('/dashboard/book')
