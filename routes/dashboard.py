@@ -29,3 +29,6 @@ app.mount('/post', post.app)
 
 from routes import book
 app.mount('/book', book.app)
+
+from routes import upload
+app.mount('/upload', upload.app)

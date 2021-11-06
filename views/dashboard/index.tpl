@@ -33,6 +33,8 @@
         include('dashboard/category.tpl')
     elif 'book' in data['route']:
         include('dashboard/book.tpl')
+    elif 'upload' in data['route']:
+        include('dashboard/upload.tpl')
     end
     %>
 </section>
