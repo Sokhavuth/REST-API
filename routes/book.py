@@ -22,3 +22,11 @@ def create():
         return create.call()
     else:
         redirect('/')
+
+@app.route('/edit/<id>')
+def edit(id):
+    if checkLogged.call():
+        from controllers.dashboard.book import edit
+        return edit.call(id)
+    else:
+        redirect('/')

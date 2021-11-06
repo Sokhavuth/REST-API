@@ -1,4 +1,4 @@
-<!--views/dashboard/post.tpl-->
+<!--views/dashboard/book.tpl-->
 <link rel='stylesheet' href='/static/styles/post.css' />
 <script src="/static/scripts/ckeditor/ckeditor.js"></script>
 <script src="/static/scripts/video.js"></script>
@@ -17,8 +17,8 @@
             <input type='text' name='title' value='{{data["item"][0]}}' placeholder='ចំណងជើង' required />
             <textarea name="content" id="editor" >{{data["item"][4]}}</textarea>
             <div class='wrapper'>
-                <input type='text' name='book_title' value='{{data["item"][6]}}' required placeholder="ឈ្មោះ​សៀវភៅ" />
-                <input type='text' name='chapter' required placeholder="ជំពូក" />
+                <input type='text' name='book_title' value='{{data["item"][7]}}' required placeholder="ឈ្មោះ​សៀវភៅ" />
+                <input type='text' name='chapter' value='{{data["item"][5]}}' required placeholder="ជំពូក" />
                 <input type='text' name='thumb' value='{{data["item"][1]}}' required placeholder="តំណរ​ភ្ជាប់​រូប​តំណាង" />
                 <input type='datetime-local' value='{{data["item"][2]}}' name='datetime' required />
                 <input type='hidden' name='editid' value='{{data["item"][3]}}' />

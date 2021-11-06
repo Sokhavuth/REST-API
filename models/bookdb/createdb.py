@@ -13,7 +13,7 @@ def call(title, thumb, datetime, id, edit, content, chapter, entries, bookTitle)
             thumb = ?,
             datetime = ?,
             content = ?,
-            category = ?,
+            chapter = ?,
             entries = ?,
             bookTitle = ?
             
