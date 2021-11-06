@@ -39,6 +39,10 @@ def loadCKEditorScript(filename):
 def loadFont(filename):
     return static_file(filename, root='./asset/font')
 
+@app.route('/static/uploads/<filename>')
+def loadFont(filename):
+    return static_file(filename, root='./asset/uploads')
+
 
 @app.route('/')
 def index():
