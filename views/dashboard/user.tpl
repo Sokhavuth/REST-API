@@ -3,21 +3,32 @@
 <script src="/static/scripts/ckeditor/ckeditor.js"></script>
 <script src="/static/scripts/video.js"></script>
 
+<style>
+.Main .content form .wrapper{
+    margin-top:5px;
+    display: grid;
+    grid-template-columns: 13% 15% 22% 22% auto 15%;
+}
+</style>
+
 <section class='Main'>
     <div class='content'>
-        <form action='/dashboard/post' method='post' >
+        <form action='/dashboard/user' method='post' >
             %if 'edit' in data:
             
             %else:
-            <input type='text' name='title' placeholder='ឈ្មោះ' required />
+            <input type='text' name='name' placeholder='ឈ្មោះ' required />
             <textarea name="content" id="editor" ></textarea>
             <div class='wrapper'>
-                <select name='category'>
-                    <option>អ្នក​និពន្ធ</option>
-                    <option>អ្នក​គ្រប់គ្រង</option>
+                <select name='role'>
+                    <option>Author</option>
+                    <option>Admin</option>
                 </select>
-                <input type='text' name='thumb' required placeholder="តំណរ​ភ្ជាប់​រូប​តំណាង" />
+                <input type='text' name='thumb' required placeholder="​រូប​តំណាង" />
                 <input type='datetime-local' value='' name='datetime' required />
+                <input type='email' name='email' required placeholder="Email" />
+                <input type='password' name='password' required placeholder="password" />
+                <input type='hidden' name='editid' value='' />
                 <input type='submit' value='ចុះ​ផ្សាយ' />
             </div>
             <input name='entries' value='' type='hidden' />

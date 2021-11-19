@@ -9,8 +9,8 @@ def call():
     kdict['siteLogo'] = 'ទំព័រ​អ្នក​ប្រើប្រាស់'
     kdict['route'] = 'user'
 
-    users, count = getdb.call(kdict['maxItemList'])
+    '''users, count = getdb.call(kdict['maxItemList'])
     kdict['items'] = users
-    kdict['count'] = count
+    kdict['count'] = count'''
 
     return template('dashboard/index.tpl', data=kdict)
