@@ -35,6 +35,8 @@
         include('dashboard/book.tpl')
     elif 'upload' in data['route']:
         include('dashboard/upload.tpl')
+    elif 'user' in data['route']:
+        include('dashboard/user.tpl')
     end
     %>
 </section>

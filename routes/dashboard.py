@@ -32,3 +32,6 @@ app.mount('/book', book.app)
 
 from routes import upload
 app.mount('/upload', upload.app)
+
+from routes import user
+app.mount('/user', user.app)
