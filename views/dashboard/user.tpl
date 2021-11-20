@@ -18,11 +18,11 @@
             <input type='text' name='name' value='{{data["item"][0]}}' required />
             <textarea name="content" id="editor" >{{data['item'][6]}}</textarea>
             <div class='wrapper'>
-                <select name='role'>
+                <select name='role' class='role'>
                     <option>Author</option>
                     <option>Admin</option>
                 </select>
-                <script>$(".category").val("{{data['item'][7]}}").change();</script>
+                <script>$(".role").val("{{data['item'][7]}}").change();</script>
                 <input type='text' name='thumb' value="{{data['item'][1]}}" required  />
                 <input type='datetime-local' value="{{data['item'][2]}}" name='datetime' required />
                 <input type='email' name='email' required value="{{data['item'][4]}}" />
