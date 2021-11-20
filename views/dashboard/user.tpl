@@ -15,7 +15,22 @@
     <div class='content'>
         <form action='/dashboard/user' method='post' >
             %if 'edit' in data:
-            
+            <input type='text' name='name' value='{{data["item"][0]}}' required />
+            <textarea name="content" id="editor" >{{data['item'][6]}}</textarea>
+            <div class='wrapper'>
+                <select name='role'>
+                    <option>Author</option>
+                    <option>Admin</option>
+                </select>
+                <script>$(".category").val("{{data['item'][7]}}").change();</script>
+                <input type='text' name='thumb' value="{{data['item'][1]}}" required  />
+                <input type='datetime-local' value="{{data['item'][2]}}" name='datetime' required />
+                <input type='email' name='email' required value="{{data['item'][4]}}" />
+                <input type='password' name='password' required value="{{data['item'][5]}}" />
+                <input type='hidden' name='editid' value='{{data["userid"]}}' />
+                <input type='submit' value='ចុះ​ផ្សាយ' />
+            </div>
+            <input name='entries' value='{{data["item"][8]}}' type='hidden' />
             %else:
             <input type='text' name='name' placeholder='ឈ្មោះ' required />
             <textarea name="content" id="editor" ></textarea>

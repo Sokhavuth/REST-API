@@ -8,17 +8,19 @@ def call(name, thumb, datetime, id, email, password, content, role, entries, edi
         sql = "INSERT INTO users VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)"
         cursor.execute(sql, (name, thumb, datetime, id, email, password, content, role, entries))
     else:
-        sql = """UPDATE post SET
-            title = ?,
+        sql = """UPDATE users SET
+            name = ?,
             thumb = ?,
             datetime = ?,
+            email = ?,
+            password = ?,
             content = ?,
-            category = ?,
-            entries = ?
+            role = ?,
+            video = ?
             
             WHERE id = ? """
 
-        cursor.execute(sql, (title, thumb, datetime, content, category, entries, id))
+        cursor.execute(sql, (name, thumb, datetime, email, password, content, role, entries, id))
 
     connection.commit()
     cursor.close()
