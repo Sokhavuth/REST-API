@@ -1,12 +1,12 @@
 #models/userdb/createdb.py
 import setConnection
 
-def call(name, thumb, datetime, email, password, content, id, role, entries, edit):
+def call(name, thumb, datetime, id, email, password, content, role, entries, edit):
     cursor, connection = setConnection.call()
 
     if not edit:
         sql = "INSERT INTO users VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)"
-        cursor.execute(sql, (name, thumb, datetime, email, password, content, id, role, entries))
+        cursor.execute(sql, (name, thumb, datetime, id, email, password, content, role, entries))
     else:
         sql = """UPDATE post SET
             title = ?,

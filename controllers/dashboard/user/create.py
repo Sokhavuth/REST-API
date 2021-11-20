@@ -21,6 +21,6 @@ def call():
     else:
         id = edit
 
-    createdb.call(name, thumb, datetime, email, password, content, id, role, entries, edit)
+    createdb.call(name, thumb, datetime, id, email, password, content, role, entries, edit)
 
     return redirect('/dashboard/user')

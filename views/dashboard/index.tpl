@@ -53,7 +53,18 @@
         %if 'items' in data:
         %for item in data['items']:
             <div class='item'>
+                %if data['route'] == 'user':
+                <style>
+                .Listing .items .item{
+                    grid-template-columns: 13% auto 20%;
+                }
+                .Listing .items .item .thumb{
+                    border-radius: 50%;
+                }
+                </style>
+                %end
                 <a href="/{{data['route']}}/{{item[3]}}"><img class='thumb' src="{{item[1]}}" /></a>
+               
 
                 <div class='wrapper'>
                     <a href="/{{data['route']}}/{{item[3]}}">{{item[0]}}</a>
